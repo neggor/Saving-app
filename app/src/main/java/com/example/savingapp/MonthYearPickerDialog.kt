@@ -76,14 +76,18 @@ class MonthYearPickerDialog(
     fun getSums(registerDao: RegisterDao, month: String, year: String, lifecycleScope: LifecycleCoroutineScope) {
         binding?.llStatistics?.removeAllViews()
         binding?.tvTitle?.text = "Total expended for ${month} ${year}:"
-        var month_short = month.substring(0, 3)
+        //TODO(Solve this mess, it's not working properly. The selected date is not matching the format of the date in the database)
+
+        var month_short = month.substring(0, 3).toLowerCase()
         lifecycleScope.launch {
             registerDao.fetchAllDates().collect() { sumsList ->
                 if (sumsList.isNotEmpty()) {
 
                     val dates = arrayListOf<RegisterEntity>()
                     for (date in sumsList) {
-                        //Log.d("MYPD", date.toString())
+                        Log.d("MYPD", date.toString())
+                        Log.d("MYPD", month_short)
+                        Log.d("MYPD", year)
                        if (filterEntry(date, month_short, year)) {
                             Log.d("MYPD", month_short)
                             Log.d("MYPD", date.toString())
@@ -153,7 +157,7 @@ class MonthYearPickerDialog(
 
 
                 }else{
-                    Toast.makeText(context, "No data to display", Toast.LENGTH_SHORT).show()
+                    Log.d("No data", "Seems there is no data to display")
                 }
             }
         }
