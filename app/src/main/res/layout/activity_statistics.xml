@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticsActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:theme="@style/ToolbarTheme"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black"
+        app:titleTextColor="@color/white"
+        android:id="@+id/toolbar_statistics_activity" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:id="@+id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_statistics_activity"/>
+    <LinearLayout
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:id="@+id/llStatistics"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle">
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtnDate"
+        app:layout_constraintTop_toBottomOf="@id/llStatistics"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ripple_effect_black_background"
+        android:textColor="@color/white"
+        android:text="Select date"
+        android:layout_marginTop="30dp"/>
+
+    <!--Ui component for our bar chart-->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/idBarChart"
+        app:layout_constraintTop_toBottomOf="@id/BtnDate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:layout_below="@id/BtnDate" />
+</androidx.constraintlayout.widget.ConstraintLayout>

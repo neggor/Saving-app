@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="match_parent"
+    android:id="@+id/llRV"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width= "150dp"
+        android:layout_height="50dp"
+        android:text="Groceries"
+        android:gravity="center"
+        android:background="@drawable/ripple_effect_white_background"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:id="@+id/Groceries"
+        android:clickable="true">
+    </TextView>
+
+    <TextView
+        android:layout_width= "150dp"
+        android:layout_height="50dp"
+        android:text="Rent"
+        android:gravity="center"
+        android:background="@drawable/ripple_effect_black_background"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:id="@+id/Rent"
+        android:clickable="true">
+    </TextView>
+
+    <TextView
+        android:layout_width= "150dp"
+        android:layout_height="50dp"
+        android:text="Insurance"
+        android:gravity="center"
+        android:background="@drawable/ripple_effect_white_background"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:id="@+id/Insurance"
+        android:clickable="true">
+    </TextView>
+
+    <TextView
+        android:layout_width= "150dp"
+        android:layout_height="50dp"
+        android:text="Gym"
+        android:gravity="center"
+        android:background="@drawable/ripple_effect_black_background"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:id="@+id/Gym"
+        android:clickable="true">
+    </TextView>
+
+    <TextView
+        android:layout_width= "150dp"
+        android:layout_height="50dp"
+        android:text="Books"
+        android:gravity="center"
+        android:background="@drawable/ripple_effect_white_background"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:id="@+id/Books"
+        android:clickable="true">
+    </TextView>
+
+    <TextView
+        android:layout_width= "150dp"
+        android:layout_height="50dp"
+        android:text="Transport"
+        android:gravity="center"
+        android:background="@drawable/ripple_effect_black_background"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:id="@+id/Transport"
+        android:clickable="true">
+    </TextView>
+
+    <TextView
+        android:layout_width= "150dp"
+        android:layout_height="50dp"
+        android:text="Order Food"
+        android:gravity="center"
+        android:background="@drawable/ripple_effect_white_background"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:id="@+id/Order_Food"
+        android:clickable="true">
+    </TextView>
+
+</LinearLayout>
